@@ -1,12 +1,9 @@
 #include <stdio.h>
+#include "fcfs.h"
 
-#define FCFS 
-
-#ifdef FCFS
-		#include "fcfs.h"
-#endif
-
-int main(void) {
+int main(void){
+		printf("Enter the number of processes: ");
 		int proc_count;
+		scanf("%d", &proc_count);
 		fcfs(proc_count);
 }

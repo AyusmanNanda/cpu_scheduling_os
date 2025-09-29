@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "procgen.h"
 #include "fcfs.h"
 
 struct proc{

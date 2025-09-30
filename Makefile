@@ -18,7 +18,7 @@ all: $(EXES)
 # Build rule for each algorithm
 # $* expands to the algorithm name (fcfs, sjfs, etc.)
 scheduler_%: $(COMMON_OBJS) %.o
-	$(CC) $(CFLAGS) -D$* $^ -o $@
+	$(CC) $(CFLAGS) -D$* $(COMMON_OBJS) $*.o -o $@
 
 # Pattern rule to compile .c to .o
 %.o: %.c

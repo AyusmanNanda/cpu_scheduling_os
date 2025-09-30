@@ -1,19 +1,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
-#include "procgen.h"
 #include "fcfs.h"
-
-struct proc{
-		int proc_id;
-		int a_time;
-		int b_time;
-		int c_time;
-		int w_time;
-		int ta_time;
-};
 
 int compareByAT(const void *a, const void *b){
 	const struct proc *p1 = (const struct proc *)a;
@@ -25,15 +14,7 @@ int compareByAT(const void *a, const void *b){
 
 }
 
-int fcfs(int proc_count){
-		srand(time(NULL)); //seed 	
-		
-		// create a bunch of process
-		struct proc process[proc_count];
-		for(int i = 0; i < proc_count ; i++){
-				process[i].proc_id = i + 1;
-				process[i].a_time = rand() % 101;
-		}
+int fcfs(int proc_count, struct proc process[]){	
 		printf("Process before sorting: \n");
 		for(int i = 0; i < proc_count; i++){
 				printf("process no %d : process id [%d], arival time [%d]\n", i, process[i].proc_id, process[i].a_time);

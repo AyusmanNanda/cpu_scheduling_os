@@ -11,21 +11,18 @@
 #ifdef FCFS
     #include "fcfs.h"
     #define schedule fcfs
-
-#elif defined(SJFS)
+#endif
+#ifdef SJFS
     #include "sjfs.h"
     #define schedule sjfs
-
-#elif defined(RR)
+#endif
+#ifdef RR
     #include "rr.h"
     #define schedule rr
-
-#elif defined(PRIORITY)
+#endif
+#ifdef PRIORITY
     #include "priority.h"
     #define schedule priority
-
-#else
-    #error "No scheduling algorithm defined. Use -DFCFS, -DSJFS, -DRR, etc."
 #endif
 
 #endif // ALGO_H

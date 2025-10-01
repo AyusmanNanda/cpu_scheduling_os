@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include "fcfs.h"
 
-int compareByAT(const void *a, const void *b){
-    const struct proc *p1 = (const struct proc *)a;
-    const struct proc *p2 = (const struct proc *)b;
-    if (p1->a_time < p2->a_time) return -1;
-    else if (p1->a_time > p2->a_time) return 1;
-    else return 0;
+int compareArrivalTime(const void *lhs, const void *rhs) {
+    const struct proc *p1 = (const struct proc *)lhs;
+    const struct proc *p2 = (const struct proc *)rhs;
+    return (p1->a_time > p2->a_time) - (p1->a_time < p2->a_time);
 }
+
 
 int fcfs(int proc_count, struct proc process[]){	
     printf("Process before sorting: \n");
@@ -18,7 +17,7 @@ int fcfs(int proc_count, struct proc process[]){
     }
 
     // Using quick sort
-    qsort(process, proc_count, sizeof(struct proc), compareByAT);
+    qsort(process, proc_count, sizeof(struct proc), compareArrivalTime);
 
     // Print after sorting
     printf("\nProcess after sorting by arrival time:\n");

@@ -16,5 +16,6 @@ void genProc(struct proc *processes, int count) {
         processes[i].c_time = 0;
         processes[i].w_time = 0;
         processes[i].ta_time = 0;
+        
     }
 }

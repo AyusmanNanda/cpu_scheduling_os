@@ -12,9 +12,13 @@
     #include "fcfs.h"
     #define schedule fcfs
 #endif
-#ifdef SJFS
+#ifdef SJFSP
     #include "sjfs.h"
-    #define schedule sjfs
+    #define schedule sjfsP
+#endif
+#ifdef SJFSNP
+    #include "sjfs.h"
+    #define schedule sjfsNP
 #endif
 #ifdef RR
     #include "rr.h"

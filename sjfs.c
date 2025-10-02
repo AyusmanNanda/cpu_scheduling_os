@@ -29,23 +29,4 @@ int sjfsNP(int proc_count, struct proc process[]){
     return 0;
 }
 
-int sjfsP(int proc_count, struct proc process[]){	
-    printf("Process before sorting: \n");
-    for(int i = 0; i < proc_count; i++){
-        printf("process no %d : process id [%d], arrival time [%d]\n", 
-               i, process[i].proc_id, process[i].a_time);
-    }
-
-    // Using quick sort
-    qsort(process, proc_count, sizeof(struct proc), compareBurstTime);
-
-    // Print after sorting
-    printf("\nProcess after sorting by arrival time:\n");
-    for(int i = 0; i < proc_count; i++){
-        printf("process no %d : process id [%d], arrival time [%d]\n", 
-               i, process[i].proc_id, process[i].a_time);
-    }
-
-    return 0;
-}
-
+int sjfsP(int proc_count, struct proc process[]);	

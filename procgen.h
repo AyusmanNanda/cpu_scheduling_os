@@ -8,6 +8,7 @@ struct proc {
     int c_time;   // completion time
     int w_time;   // waiting time
     int ta_time;  // turnaround time
+    int completed; // This is used for some alog like SJFS where we mark is the process is completed using 0 or 1
 };
 
 // Generate random processes

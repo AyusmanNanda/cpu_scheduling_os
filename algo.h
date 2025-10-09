@@ -18,7 +18,7 @@
     #include "sjfs.h"
     #define schedule sjfsNP
 #else 
-    //ERROR: DO NOTHING
+    //#error "ERROR: DO NOTHING"
 #endif
 
 #endif // ALGO_H

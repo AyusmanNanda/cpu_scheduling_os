@@ -8,25 +8,17 @@
 
 */
 
-#ifdef FCFS
+#if defined(FCFS)
     #include "fcfs.h"
     #define schedule fcfs
-#endif
-#ifdef SJFSP
+#elif defined(SJFSP)
     #include "sjfs.h"
     #define schedule sjfsP
-#endif
-#ifdef SJFSNP
+#elif defined(SJFSNP)
     #include "sjfs.h"
     #define schedule sjfsNP
-#endif
-#ifdef RR
-    #include "rr.h"
-    #define schedule rr
-#endif
-#ifdef PRIORITY
-    #include "priority.h"
-    #define schedule priority
+#else 
+    //ERROR: DO NOTHING
 #endif
 
 #endif // ALGO_H

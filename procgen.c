@@ -16,6 +16,7 @@ void genProc(struct proc *processes, int count) {
         processes[i].c_time = 0;
         processes[i].w_time = 0;
         processes[i].ta_time = 0;
+		processes[i].completed = 0; // Assign to 0 cause by default the process will be unsorted and we will mark 1 if the process is sorted
         
     }
 }

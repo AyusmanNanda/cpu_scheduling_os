@@ -21,7 +21,8 @@ NOTE : There are two ways we can define a thing in c .
 
 */
 #include "algo.h" // Determines additional imports
-#include "procgen.h" // Generates random process 
+// #include "procgen.h" // Generates random process 
+#include "getproc.h"
 
 int main(void){
 		struct proc *processes = NULL;
@@ -29,7 +30,7 @@ int main(void){
 		int proc_count;
 		scanf("%d", &proc_count);
 		processes = malloc(proc_count * sizeof(struct proc)); // create an array of struct with the desired no. proc_count
-		genProc(processes, proc_count); // fill the structs with proc gen logic
+		getProc(processes, proc_count); // fill the structs with proc gen logic
 
 		#ifdef schedule
     		schedule(proc_count, processes); // pass the data to the scheduling algorithim if schedule is define . so there is no error about implicit declation of function. 

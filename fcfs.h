@@ -1,8 +1,8 @@
 #ifndef FCFS_H
 #define FCFS_H
 
-#include "procgen.h"   // to know the definition of struct proc
-
+//#include "procgen.h"   // to know the definition of struct proc
+#include "getproc.h"
 // Function prototype for FCFS scheduling
 int fcfs(int proc_count, struct proc process[]);
 

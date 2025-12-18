@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define ALGO  // Define the algorithim in capital eg. FCFS SJFS etc.
+#define FCFS  // Define the algorithim in capital eg. FCFS SJFS etc.
 
 /*Information about the native library algo.h and procgen.h 
 

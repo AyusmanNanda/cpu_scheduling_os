@@ -1,5 +1,5 @@
-#ifndef PROCGEN_H
-#define PROCGEN_H
+#ifndef PROC_H
+#define PROC_H
 
 struct proc {
     int proc_id;  // process id
@@ -12,6 +12,7 @@ struct proc {
 };
 
 // Generate random processes
+void getProc(struct proc *processes, int count);
 void genProc(struct proc *processes, int count);
 
-#endif
+#endif //PROC_H

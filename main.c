@@ -21,8 +21,8 @@ NOTE : There are two ways we can define a thing in c .
 
 */
 #include "algo.h" // Determines additional imports
-// #include "procgen.h" // Generates random process 
-#include "getproc.h"
+#include "proc.h" // Generates random process 
+
 
 int main(void){
 		struct proc *processes = NULL;

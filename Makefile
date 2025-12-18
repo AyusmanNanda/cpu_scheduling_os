@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 
 # Common source files
-COMMON_SRCS = main.c procgen.c
+COMMON_SRCS = main.c proc.c
 COMMON_OBJS = $(COMMON_SRCS:.c=.o)
 
 # List of scheduling algorithms (add new algorithms here)
